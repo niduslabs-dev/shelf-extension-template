@@ -1,0 +1,7 @@
+{
+  "extensions": {
+    "YOUR_EXTENSION_ID": {
+      "publishers": ["YOUR_GITHUB_LOGIN"]
+    }
+  }
+}

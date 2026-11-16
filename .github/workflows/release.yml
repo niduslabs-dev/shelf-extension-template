@@ -1,0 +1,22 @@
+# Packs and signs extension/, creates GitHub Release v<version> with the .crx,
+# and shows the Shelf pull request to open in the run's summary.
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: niduslabs-dev/shelf/actions/publish@92bd60b49463d63a4123c9892d4850bc13a15cec
+        with:
+          path: extension
+          signing-key: ${{ secrets.SHELF_SIGNING_KEY }}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "My extension",
+  "description": "One line about what it does.",
+  "version": "1.0",
+  "update_url": "https://shelf.niduslabs.dev/updates/YOUR_EXTENSION_ID.xml",
+  "action": {
+    "default_title": "My extension"
+  }
+}
